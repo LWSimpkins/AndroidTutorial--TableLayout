@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:text="@string/hello_world"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
+<!--
+- The Table Layout automatically calculates the layout_width and layout_height for Views inside the
+  layout, both inside and outside of Table Rows
+- By default Table Row uses match parent (width) and wrap content (height), so don't need to use
+  layout_width and layout_height unless you want to customize something.
+- The Row with the most Views defines the number of colums in a Layout
+
+Properties:
+- stretch Columns. Uses indices starting at 0. Ex: stretchColumns ="0", stretchColumns ="1,2",
+  stretchColumns ="*" (all cols)
+- shrink Columns. Same syntax as stretchColumns
+- layout span. Let a view inside a Row span multiple columns
+- layout column. specify which column the view appears in. Ex use: first row has 3 Views. second row
+  has 2 Views, but you want the second View to be in the 3rd column, not the 2nd.
+- collapse columns. hide a column
+->
